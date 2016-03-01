@@ -1,0 +1,163 @@
+@media screen and (max-width:1024px)						  
+{
+ 
+.latestheadlines {
+    float: left;
+    width: 50%;
+}
+
+.chearleaders_wrap {
+    float: right;
+    margin-left: 0;
+}	
+.testimonial_wrap {
+    clear: both;
+    float: none;
+    margin: 10px auto;
+    width: 55%;
+}
+.booknowbtn  { width:23%; text-align:center; }
+.nav_list    { float:right; }
+.nav_list > li a  { padding:18px 8px; }
+.upcomingmatch_disc  { width:85%; min-height:46px; }
+.matchlocation       { padding-top:2px; }
+.booknowbtn {
+    text-align: center;
+    width: 15%;
+	
+}
+}
+@media screen and (max-width:980px)						  
+{
+.events_list>li  { float:left; width:31.33%; margin:10px 1%; }
+}
+
+@media screen and (max-width:800px)						  
+{
+.headingwrap h3  { left:30%; }
+.upcomematch_wrap { float:none; width:100%; clear:both; }
+.livematch_wrap  { float:left; width:100%; clear:both;  }
+.nav_list > li a  { padding:17px 8px; }
+.upcomingmatch_disc {
+    background-color: #f88d04;
+    float: left;
+    min-height: 57px;
+    padding: 0 10px;
+    width: 85%;
+}
+.matchlocation {
+    color: #ffffff;
+    float: left;
+    font-family: "SportsWorld";
+    font-size: 18px;
+    line-height: 19px;
+    padding-left: 12px;
+    padding-top: 5px;
+    width: 85%;
+}
+.form-left  { }
+
+.form-right     { float:right; width:38%; }
+.form-left      { background-color:#fff; float:left; padding:20px; width:60%; }
+.formvalue_wrap { width:68%; }
+.formfield_wrap { width:31%; }
+.cheargirlstxt_wrap { width:80%; }
+}
+
+@media screen and (max-width:767px)						  
+{
+.latestheadlines { float:none; width:100%; clear:both;  }
+.chearleaders_wrap { float:none; width:100%; clear:both; }
+.testimonial_wrap  { float:none; width:100%; clear:both; }
+.headingwrap h2    { left:34%; }
+.headingwrap h3    { left:26%; }
+.bannertxtwrap h1  { font-size:28px; line-height:32px; }
+.matchlocation     { font-size:15px; }
+.upcomingmatch_disc  { width:100%; }
+.booknowbtn          { width:145px; border-left:none; margin-top:12px;  }
+.footer_right        { float:left; margin-top:10px; }
+
+
+.nav_list>li            { float:none; width:100%; background:none;  }
+.nav_list>li>a          { text-align:center; border-right:none; border-bottom:1px solid #fff; padding:11px 0px; display:block; color:#fff;}
+.nav_list>li>a:hover    {  color:#f15e28; }
+.nav_list>li>a.active   {  color:#f15e28; }
+.nav_list>li:last-child>a{ border-right:none; }
+.nav_list               { display:none; border:1px solid #fff; position:absolute; right:0px; width:100%; top:115px; z-index:1; background-color:#f99204; }
+.mobile_menuicon        { display:block; padding:10px; float:left;   }
+.site_logo  { float:none; width:100%; text-align:center; }
+nav         { height:auto; }
+.btnimg     { display:none; }
+.submitbtns    { top:0px; }
+.submitbtns input[type="submit"] { margin-top:10px; }
+.form-right     { float:none; width:100%; }
+.form-left      { background-color:#fff; float:none; padding:20px; width:100%; }
+.booktripleft {
+    float: none;
+    width: 100%;
+}
+.booktripright {
+    float: none;
+    width: 100%;
+	margin-top:15px;
+}
+.formfields_wrap        { float:left; width:30%; font-family:'Source Sans Pro', sans-serif; color:#9c9c9c; font-weight:bold;                         font-size:14px; margin-top:8px; text-align:right; }
+.formvalues_wrap        { float:right; width:67%;font-family:'Source Sans Pro', sans-serif; color:#2d2d2d; font-weight:400;                         font-size:14px;  }
+
+}
+@media screen and (max-width:638px)						  
+{
+.events_list>li  { float:left; width:48%; margin:10px 1%; }
+.upcomematch_wrap h1  { font-size:24px; }
+.bannerslicewrap p   { max-width:auto; line-height:23px; }
+
+.leftstadium    { float:none;  width:100%; }
+.rightstadium    { float:none;  width:100%; margin-top:15px;  }
+
+}
+
+@media screen and (max-width:480px)						  
+{
+.events_list>li  { float:left; width:98%; margin:10px 1%; }
+.headingwrap h2    { left:28%; }
+.headingwrap h3    { left:15%; }
+.matchlocation     { float:none; width:100%; clear:both; margin:0px; }
+.footer_left       { float:none; width:100%; clear:both; margin:0px; text-align:center; }
+.footer_right       { float:none; width:100%; clear:both; margin:0px; text-align:center; margin-top:10px; }
+.menu_list li      { float:none; width:100%; clear:both; text-align:center; border-right:none; }
+.menu_list > li a  { background:none; }
+}
+@media screen and (max-width:420px)						  
+{
+
+.submitbtns {
+    float: none;
+    position: relative;
+    text-align: center;
+	top:0px;
+}
+
+.btnimg {
+    float: none;
+    text-align: center;
+}
+.site_logo  { top:-10px; }
+.mobile_menuicon  { float:none; text-align:center; }
+}
+@media screen and (max-width:360px)						  
+{
+.headingwrap h2  { font-size:13px; left:19%; }
+.headingwrap h3  { width:auto; left:14%; font-size:13px; }
+.headdr_right    { float:none; width:100%; clear:both; }
+.formvalue_wrap {  float:none; width:100%; clear:both; }
+.formfield_wrap {  float:none; width:100%; clear:both; }
+.formfields_wrap        { float:none; width:100%; clear:both; text-align:left; }
+.formvalues_wrap        { float:none; width:100%; clear:both; text-align:left;  }
+
+}
+
+@media screen and (max-width:320px)						  
+{
+.headingwrap h2  { font-size:13px; left:14%; }
+.headingwrap h3  { width:auto; left:9%; font-size:13px; }
+}

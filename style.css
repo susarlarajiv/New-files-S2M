@@ -1,0 +1,278 @@
+/* Fonts ========================================================================*/
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
+/* Reseting ====================================================================*/
+
+/*font-family: 'Source Sans Pro', sans-serif;*/
+/*font-family: 'Raleway', sans-serif;*/
+
+ 
+@font-face {
+ font-family:'Conv_centuryGothic_bold';
+ src: url('fonts/centuryGothic_bold.eot');
+ src: local('☺'), 
+   url('fonts/centuryGothic_bold.woff') format('woff'), 
+   url('fonts/centuryGothic_bold.ttf') format('truetype'), 
+   url('fonts/centuryGothic_bold.svg') format('svg');
+ font-weight: normal;
+ font-style: normal;
+}
+/* font-family:'Conv_centuryGothic_bold',Sans-Serif;*/
+
+
+ 
+@font-face {
+    font-family: 'CenturyGothicRegular';
+    src: url('fonts/gothic_0.eot');
+    src: url('fonts/gothic_0.eot') format('embedded-opentype'),
+         url('fonts/gothic_0.woff') format('woff'),
+         url('fonts/gothic_0.ttf') format('truetype'),
+         url('fonts/gothic_0.svg#CenturyGothicRegular') format('svg');
+}
+
+
+@font-face {
+   font-family: 'SportsWorld';
+    src: url('fonts/SportsWorld.eot');
+    src: url('fonts/SportsWorld.eot') format('embedded-opentype'),
+         url('fonts/SportsWorld.woff') format('woff'),
+         url('fonts/SportsWorld.ttf') format('truetype'),
+         url('fonts/SportsWorld.svg#SportsWorld') format('svg');
+}
+
+
+
+*{ margin:0px; padding:0px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary 	{ display: block; }
+audio,
+canvas,
+progress,
+video 		{ display: inline-block; vertical-align: baseline;}
+a			{ text-decoration:none; border:none; outline:none; color:#000;}
+a:active,
+a:hover 	{ outline: 0;}
+img			{ border:none; outline:none; max-width:100%; height:auto;}
+ul			{ list-style:none;}
+body		{ background-color:#000; }
+h1			{ font-size:36px;}
+h2			{font-size:30px;}
+h3			{font-size:20px;}
+h4			{font-size:18px;}
+h5          {font-size:15px;}
+h6          { font-size:15px;}
+p{ padding:7px 2px; line-height:22px; text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#333333;}
+.clear_fix	{ width:100%; clear:both;} 
+.res_images	{ width:100%; height:auto;}
+.res_row	{ width:100%; clear:both;}
+::-webkit-input-placeholder { color:#fff; }
+:-moz-placeholder 			{ color:#fff; }
+::-moz-placeholder 			{ color:#fff; }
+:-ms-input-placeholder 		{ color:#fff; }
+
+/* layouts ===============================================================================*/
+.full_wrapper			{ width:100%;}
+.site_container			{ width:95%; max-width:1150px; margin-left:auto; margin-right:auto; position:relative; }
+.site_container1		{ width:95%; max-width:1472px; margin-left:auto; margin-right:auto; position:relative; }
+.site_container2		{ width:95%; max-width:1004px; margin-left:auto; margin-right:auto; position:relative; }
+/* dividers ========================================================================*/
+
+nav  { background-color:#f99204; border-bottom:1px solid #fff; border-top:1px solid #fff; height:57px; position:relative; }
+.site_logo { float:left; position:relative; top:-32px;  }
+.site_logo img{ width:100%; height:auto; max-width:175px; }
+.buttonclas  { background-color:#9fcb4b; border:none; font-family: 'SportsWorld'; font-size:18px; 
+                                   color:#fff; padding:12px 15px; margin-top:12px; -moz-appearance:none;  
+								   -webkit-appearance:none; appearance:none; width:100%; border-radius:7px;  }									 								
+
+.nav_list   { font-family: 'SportsWorld'; color:#fff; font-size:14px; margin-left:20px; float:left; }
+.nav_list>li{ float:left; }
+.nav_list>li a {color:#fff; padding:17px 5px; display:block; border-right:1px solid #fdcf83; }
+.nav_list>li:nth-child(5) a {   }
+
+.submitbtns  { float:left; position:relative; top:14px;  }
+.submitbtns input[type="submit"] { background-color:#f15e28; padding:6px; font-family:Arial, Helvetica, sans-serif; color:#fff; font-size:11px; margin-right:0px; border:none; font-weight:600;   }
+.submitbtns input[type="button"] { background-color:#f15e28; padding:6px; font-family:Arial, Helvetica, sans-serif; color:#fff; font-size:11px; margin-right:0px; border:none; font-weight:600;   }
+
+.btnimg  { float:right; }
+
+.bannertxtwrap    {   }
+.bannertxtwrap h1 { font-family: 'SportsWorld'; color:#fba306; font-size:58px; text-align:center; line-height:43px; text-shadow: 1px 1px #FFFFFF; margin-top:15px; }
+.bannertxtwrap h4 { font-family: 'SportsWorld'; color:#000000; font-size:22px; text-align:center; margin-bottom:10px;  }
+.bannerslicewrap  { background:url(images/bannerslice_05.png) no-repeat center; background-size:cover; }
+.bannerslicewrap p  { max-width:680px; color:#fff; text-transform:uppercase; font-family:'Conv_centuryGothic_bold'; font-size:19px; padding:8px 0px; line-height:16px; margin:auto; margin-top:25px;  text-align:center;  }
+.upcomematch_wrap    { background-color:#292929; width:100%;  border-bottom:1px solid #808080; padding:20px; margin-bottom:20px; padding-bottom:15px; }
+.upcomematch_wrap h1 { font-family: 'SportsWorld'; color:#fff; font-size:28px; text-align:left; text-transform:uppercase; }
+.upcomematch_wrap h5 { font-family: 'SportsWorld'; color:#fff; font-size:14px; text-align:left; text-transform:uppercase; padding-top:5px; }
+.livematch_wrap      { background-color:#292929; float:right; width:34.5%;  border-bottom:1px solid #808080; text-align:center; padding:7px; }
+ .livematchdisc_wrap  { font-family:'Conv_centuryGothic_bold'; text-transform:uppercase; font-size:14px; color:#fff; padding:27px 35px; text-align:justify; }
+
+
+
+
+.events_list         { font-family: 'SportsWorld'; color:#000000; font-size:14px; padding-top:10px; }
+.events_list>li      { float:left; width:18%; margin:10px 1%; }
+.events_list>li img  { width:100%; height:auto; }
+.events_list p       { font-family: 'SportsWorld'; color:#000000; font-size:14px; line-height:20px; padding:10px 15px; }
+.whitebg_wrap        { background-color:#fff; padding:15px 0px; }
+
+.headingwrap         { border-bottom:2px solid #f15e28; position:relative; margin:24px 0px;  }
+.headingwrap h2      { background:#f15e28; font-family: 'SportsWorld'; color:#fff; font-size:16px; padding:8px 15px; text-align:center; width:220px; margin:0px auto; position:absolute; bottom:-18px; left:40%; }
+.headingwrap h3      { background:#f15e28; font-family: 'SportsWorld'; color:#fff; font-size:16px; padding:8px 15px; text-align:center; width:320px; margin:0px auto; position:absolute; bottom:-18px; left:35%; }
+
+footer  { padding:15px 0px; }
+.footer_left  { float:left;font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#fff; font-weight:600; }
+.footer_right { float:right; }
+.menu_list    { font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#fff; font-weight:600; }
+.menu_list>li  { float:left;  }
+.menu_list>li a{ background:url(images/menu_border_27.png) no-repeat right; padding:0px 8px; display:block; color:#fff; }
+.menu_list>li:nth-child(7) a { background:none; }
+
+.latestheadlines    { float:left; width:63%; }
+.latestheadlines h1 { font-family: 'SportsWorld'; color:#2d2d2d; font-size:16px; }
+
+.headlines_list     { font-family: 'Source Sans Pro', sans-serif; font-size:14px; margin-top:8px; }
+.headlines_list li  { padding:8px 15px; border-bottom:1px solid #cccccc; color:#000000; }
+
+.chearleaders_wrap  { float:left; margin-left:2%; }
+.cheargirls_wrap    { position:relative; }
+.cheargirlstxt_wrap { position:absolute; left:0px; bottom:0px; color:#000; font-family: 'SportsWorld'; font-size:14px; padding:10px 10px; background:url(images/white-bg_20.png) repeat; width:63%; max-width:226px;  }
+
+.viewall           { font-family: 'Source Sans Pro', sans-serif; font-size:12px; color:#000000; margin:10px 15px; }
+.viewall a         { text-decoration:underline; }
+
+.testimonial_wrap  { float:right; width:33%;  }
+.testimonialbg_wrap  { background:url(images/testimonialbg_20.png) no-repeat; background-size:cover; padding:25px 20px; }
+.testimonialbg_wrap h1 { font-family:'Conv_centuryGothic_bold'; text-transform:uppercase; font-size:36px; color:#fff; text-align:center; }
+
+.testimonial_list   { font-family:"Times New Roman", Times, serif; font-style:italic; font-weight:600; font-size:19px; margin-top:15px; }
+.testimonial_list li { padding:12px 0px; text-align:center; border-bottom:1px solid #fbbc81; color:#fff; }
+.testimonial_list li:last-child { border-bottom:none; }
+
+.upcomingmatch_list    { }
+.upcomingmatch_list li {  margin-top:11.4px; min-height:57px; width:100%; }
+.upcomingmatch_disc    { float:left; background-color:#f88d04; padding:4px 10px;min-height:57px; width:90%; }
+
+.countryflags          { float:left; }
+.matchlocation         { float:left; width:85%; font-family: 'SportsWorld'; color:#ffffff; font-size:18px; line-height:19px; padding-top:11px; padding-left:12px; }
+.availablebtn          { float:left; width:15%; margin-top:5px; text-align:center; }
+.availablebtn input[type="submit"]         {  background: #f88c04 none repeat scroll 0 0;
+    border: 1px solid #fcc682;
+    color: #fbc296;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 2px;}
+
+.availablebtn input[type="submit"]         {  background: #f88c04 none repeat scroll 0 0;
+    border: 1px solid #fcc682;
+    color: #fbc296;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 2px;}
+
+.availablebtn input[type="submit"]:hover   { background:#f25f29; }
+.booknowbtn            { float:left;  border-left:1px solid #fff; background-color:#f3652d; font-family: 'SportsWorld'; color:#ffffff; font-size:18px; min-height:47px;  width:10%; text-align:center; line-height:18px; }
+.booknowbtn a          { color:#fff; text-transform:uppercase; padding:10.5px 9px; display:block; }
+.content_wrap          { padding:10px 20px; }
+.resplane_img          { width:100%; height:auto; max-width:467px;  }
+.headdr_right          { float:right; }
+.mobile_menuicon       { display:none; }
+
+.completepurchase      { background:url(images/white-bg_03.png) repeat; padding:20px 0px; margin-top:55px;  }
+.completepurchase h1   { font-family: 'SportsWorld'; color:#2d2d2d; font-size:22px; margin-bottom:20px; }
+
+.form-left             { float:left; width:65%; background-color:#fff; padding:20px;   }
+.formfield_wrap        { float:left; width:20%; font-family:'Source Sans Pro', sans-serif; color:#2d2d2d; font-weight:400;                         font-size:14px; margin-top:8px; }
+.formvalue_wrap        { float:left; width:80%;font-family:'Source Sans Pro', sans-serif; color:#2d2d2d; font-weight:400;                         font-size:14px;  }
+.formvalue_wrap input[type="text"] { border:1px solid #b4b4b4; -webkit-border-radius:3px; -moz-border-radius:3px;
+                                     border-radius:3px; width:100%; height:31px; font-family:'Source Sans Pro', sans-serif;                                     color:#2d2d2d; font-weight:400; font-size:14px; padding:0px 10px; }
+.form-left textarea              {    border:1px solid #b4b4b4; -webkit-border-radius:3px; -moz-border-radius:3px;
+                                     border-radius:3px; width:100%; height:131px; font-family:'Source Sans Pro', sans-serif;                                     color:#2d2d2d; font-weight:400; font-size:14px; margin-top:7px;  padding:10px 10px;   }	
+.form-left input[type="submit"]  { background-color:#f6793b; border:none; font-family: 'SportsWorld'; font-size:18px; 
+                                   color:#fff; padding:5px 15px; margin-top:12px; -moz-appearance:none;  
+								   -webkit-appearance:none; appearance:none; }									 								
+.form-left input[type="button"]  { background-color:#f6793b; border:none; font-family: 'SportsWorld'; font-size:18px; 
+                                   color:#fff; padding:5px 15px; margin-top:12px; -moz-appearance:none;  
+								   -webkit-appearance:none; appearance:none; }									 								
+
+.form-left h2          { font-family:'Source Sans Pro', sans-serif; color:#2d2d2d; font-weight:300; font-size:26px; 
+                         margin-top:14px; }
+.form-right            { float:right; width:32%;  }
+.fieldslist            { }
+.fieldslist li         { margin-top:15px; }
+.city                  { width:40%; float:left; }
+.state                 { width:30%; float:left; }
+.zipcode               { width:30%; float:left; }
+.city input[type="text"] { border:1px solid #b4b4b4; -webkit-border-radius:3px; -moz-border-radius:3px;
+                                     border-radius:3px; width:98%; height:31px; font-family:'Source Sans Pro', sans-serif;                                     color:#2d2d2d; font-weight:400; font-size:14px; padding:0px 10px;  }
+.state input[type="text"] { border:1px solid #b4b4b4; -webkit-border-radius:3px; -moz-border-radius:3px;
+                                     border-radius:3px; width:96%; height:31px; font-family:'Source Sans Pro', sans-serif;                                     color:#2d2d2d; font-weight:400; font-size:14px; padding:0px 10px;  }
+.zipcode input[type="text"] { border:1px solid #b4b4b4; -webkit-border-radius:3px; -moz-border-radius:3px;
+                                     border-radius:3px; width:100%; height:31px; font-family:'Source Sans Pro', sans-serif;                                     color:#2d2d2d; font-weight:400; font-size:14px; padding:0px 10px;  }
+.totalwrap   { }
+.totalwrap a { color:#006da6; text-decoration:underline; }
+.couponcode  { font-family:'Source Sans Pro', sans-serif; color:#2d2d2d; font-size:14px; }
+.couponcode input[type="text"] { border:1px solid #b4b4b4; -webkit-border-radius:3px; -moz-border-radius:3px;
+                                     border-radius:3px; width:220px; height:31px; font-family:'Source Sans Pro', sans-serif;                                     color:#2d2d2d; font-weight:400; font-size:14px; padding:0px 10px;  } { }
+
+.paymentoptions  { background-color:#fff; padding:10px 15px; font-family:'Source Sans Pro', sans-serif; color:#2d2d2d;                   font-weight:400; font-size:14px; margin-top:15px; }
+.paymentoptions h2 { font-family:'Source Sans Pro', sans-serif; color:#2d2d2d; font-weight:300; font-size:26px; 
+                    padding-bottom:10px; border-bottom:1px solid #dddddd;        }
+
+.pricesummary     { background-color:#fff; padding:10px 10px;font-family:'Source Sans Pro', sans-serif; color:#2d2d2d; font-weight:400; font-size:14px; }
+.summary_list     { }
+.summary_list li  { padding:10px 0px; border-top:1px solid #dddddd; }
+
+.pricetype        { font-family:'Source Sans Pro', sans-serif; color:#2d2d2d; font-weight:400; font-size:14px; float:left;                     margin-top:5px;  }
+.pricevalue       { font-family:'Source Sans Pro', sans-serif; color:#2d2d2d; font-weight:400; font-size:14px; float:right;                    padding-right:15px; margin-top:5px; }
+.booktrip         { background-color:#fff; padding:20px; }
+.booktripleft     { float:left; width:60%; }
+.booktripright     { float:right; width:32%; }
+
+.booktrip h2      { font-family:'SportsWorld'; color:#000000; font-size:30px;  }
+.booktrip h4      { font-family: 'Raleway', sans-serif; color:#8d8d8d; font-size:21px; font-weight:bold; margin-top:10px;  }
+.booktrip h5      { font-family:'Source Sans Pro', sans-serif; color:#8d8d8d; font-size:17px; font-weight:400; margin-top:3px;  }
+.tripform         { background:#f5f5f5; padding:5px 20px; margin-top:10px; padding-bottom:20px; }
+.formfields_wrap        { float:left; width:20%; font-family:'Source Sans Pro', sans-serif; color:#9c9c9c; font-weight:bold;                         font-size:14px; margin-top:8px; text-align:right; }
+.formvalues_wrap        { float:right; width:77%;font-family:'Source Sans Pro', sans-serif; color:#2d2d2d; font-weight:400;                         font-size:14px;  }
+.formvalues_wrap input[type="text"] { border:1px solid #b4b4b4; -webkit-border-radius:3px; -moz-border-radius:3px;
+                                     border-radius:3px; width:100%; height:31px; font-family:'Source Sans Pro', sans-serif;                                     color:#2d2d2d; font-weight:400; font-size:14px; padding:0px 10px; }
+.booktripleft input[type="submit"]  { background-color:#f6793b; border:none; font-family: 'SportsWorld'; font-size:18px; 
+                                   color:#fff; padding:5px 15px; margin-top:12px; -moz-appearance:none;  
+								   -webkit-appearance:none; appearance:none; }									 								
+
+.booktripleft input[type="button"]  { background-color:#f6793b; border:none; font-family: 'SportsWorld'; font-size:18px; 
+                                   color:#fff; padding:5px 15px; margin-top:12px; -moz-appearance:none;  
+								   -webkit-appearance:none; appearance:none; }									 								
+
+
+.selectqty-style{ overflow:hidden; background:#fff url(images/selectarrw_03.png) no-repeat 100% 50%; border-radius: 3px;                       font-family:'Source Sans Pro', sans-serif; font-size:14px; height:30px; margin-top:0px; width:105px;    border:1px solid #aeaeae; float:left; }
+.selectqty-style select { width:100%; border:none; box-shadow:none; background:transparent; background-image:none; -webkit-appearance:none; -moz-appearance:none;	appearance:none; font-family:'Source Sans Pro', sans-serif; font-size:14px; height:30px;color:#2d2d2d; }
+.selectqty-style select:focus {    outline: none; }
+
+.selectimg      { font-family:'Source Sans Pro', sans-serif; font-size:12px; margin-top:12px;  }								
+.leftstadium    { float:left;  width:45%; }
+.rightstadium    { float:right;  width:45%;  }
+.stadiumimg      { background:url(images/black-slice_03.png) repeat; padding:20px; text-align:center; width:85%; margin:auto;  }
+.stadiumdisc      { background:#000; padding:10px 20px; text-align:center; }
+.stadiumdisc p     { color:#ffffff; font-size:14px; font-family:'Source Sans Pro', sans-serif; font-size:14px; }
+.stadiumdisc input[type="submit"]  { background-color:#f6793b; border:none; font-family: 'SportsWorld'; font-size:18px; 
+                                   color:#fff; padding:5px 15px; margin-top:12px; -moz-appearance:none;  
+								   -webkit-appearance:none; appearance:none; }									 								
+
+
+.stadiumfull-wrap   { }
+.flightwrap         { text-align:center; position:relative; top:52px; margin-top:0px; }
+.blackbgwrap        {  min-height:90px; background:#000 url(images/borderwhite_07.png) no-repeat center bottom;
+                      padding-bottom:20px;  }
+ 

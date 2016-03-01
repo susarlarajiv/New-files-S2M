@@ -1,0 +1,34 @@
+<?php
+ob_start();
+session_start();
+ini_set( "session.cookie_lifetime", "0" ); 
+include('dbconfig.php');
+include('administrator/includes/dbconnection.php');
+include('administrator/model/sitesettings.class.php');
+
+include('model/frontend.class.php');
+
+$front_Obj = new frontendClass();
+
+$sitesettings = $front_Obj->getsitesettings();
+//print_r($sitesettings);
+
+
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Safe2Meet</title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<link type="text/css" rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+<header class="full_wrapper">
+  <div class="site_container">
+    <div class="header-logo"><img src="images/header-logo_03.png" /></div>
+  </div>
+</header>
