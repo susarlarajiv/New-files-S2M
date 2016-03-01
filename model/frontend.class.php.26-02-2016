@@ -1,0 +1,466 @@
+<?php
+class frontendClass
+{ 
+ 
+ 
+   function getsitesettings()
+  {
+	 
+	 global $callConfig;
+	 $query=$callConfig->selectQuery(TBL_SITESETTINGS,'*','','','','');
+	return $callConfig->getRow($query);
+	  
+  }
+  
+  
+ 
+ 
+  function getblogdetails()
+  {
+	 
+	  global $callConfig;
+	  $query=$callConfig->selectQuery(TBL_TESTIMONIAL,'*','','','','');
+	 
+	  return $callConfig->getAllRows($query);
+  }
+  
+  function getblogabout($id)
+  {
+	 
+	  global $callConfig;
+	  $whr = "id".$id."";
+	  $query=$callConfig->selectQuery(TBL_CONTENTPAGE,'*',$whr,'','','');
+	 
+	  return $callConfig->getRow($query);
+  }
+  
+  
+  function userregister()
+
+  {
+  //print_r($_POST); exit;
+	 global $callConfig;
+	//$eventimage = $callConfig->freeimageUploadcomncode("username",'image',"uploads/reguser/","uploads/reguser/thumbs/",'','','');
+	//$i=date("Y-m-d H:i:s");
+	$i=date("Y-M-d");
+	
+	//exit();
+	 $fields=array(
+	 //'username'=>$_POST['uname'],
+	// 'reguser_image'=>$eventimage,
+	 
+	   'user_first_name'=>$_POST['fname'],
+	   'user_last_name'=>$_POST['lname'],
+	   'user_email_address'=>$_POST['email'],
+	   'User_Type_user_type_id'=>'1',
+	  'user_Role_user_role_id'=>'3',
+      'user_password'=>$callConfig->passwordEncrypt($_POST['password']),
+	 //'dateofbirth'=>$_POST['dateofbirth'],
+	  //'stateofbirth'=>$_POST['stateofbirth'],
+	// 'cityofbirth'=>$_POST['cityofbirth'],
+	 //'userstatus'=>'unblocked',
+	 'user_create_date'=>$i,
+	 
+	  'user_status_id'=>'2'
+	
+	 /*'type'=>'user',	
+	 'date'=>date('Y-m-d')*/);
+//print_r($fields); exit;
+ $res=$callConfig->insertRecord(TBL_USER,$fields); 
+	 
+	 $uid = mysql_insert_id();
+
+	 if($res!="")
+
+    {
+$field=array(
+		'user_status_id'=>'2',
+		'user_status_desc'=>'Inactive',
+		'user_type_is_active'=>'2',
+		'user_status_id'=>$uid,
+		);
+		$ress=$callConfig->insertRecord(TBL_USER_STATUS,$field); 		
+				if($ress!=""){
+
+			$callConfig->headerRedirect("index.php?user_id=".$uid."&msgreg=successfully");
+
+			}
+			}
+
+			
+
+			else
+
+			{	
+
+			 $callConfig->headerRedirect("register.php?&msgreg=failed");
+			}
+
+	        
+	
+
+  }
+  
+  
+    function getlogindetails($post)
+  {
+	 //print_r($post);exit;
+	
+	 global $callConfig;
+ $raj="select * from user where user_email_address='".$_POST['email']."' and user_password='".$callConfig->passwordEncrypt($_POST['password'])."' and user_status_id='1'";  
+// print_r($raj);exit;
+ $qq1=mysql_query($raj);
+ $res=mysql_fetch_array($qq1);
+ $rows=mysql_num_rows($qq1);
+  //print_r($rows);exit;
+  
+  if($rows>=1)
+   { //echo "Hi All";exit;
+	   
+	       $_SESSION['frontend_id']=$res['user_id']; 
+			$_SESSION['user_username']=$res['user_username'];
+			$_SESSION['user_email_address']=$res['user_email_address'];
+			
+				
+			{
+		
+		header("location:dashboardnewuser.php?msg='LogIn Successfully'" );
+			}
+	   
+   }
+   else 
+		{
+				header("location:index.php?msg='LogIn Failed'" );	
+		}
+  
+  
+  }
+  
+  function getaccountdetails()
+  {
+	 
+	 global $callConfig;
+	 $where = "user_id='".$_SESSION['frontend_id']."'";
+    $query=$callConfig->selectQuery(TBL_USER,'*',$where,'','','');
+	return $callConfig->getRow($query);
+	  
+  }
+  
+  
+  
+  function forgot($post)
+  {
+	  //print_r($_POST);exit;
+
+	global $callConfig;
+
+	$queryman=$callConfig->selectQuery(TBL_SITESETTINGS,'*','','','','');
+
+	$sitedata=$callConfig->getRow($queryman);
+
+	
+	
+ 	$query=$callConfig->selectQuery(TBL_USER,'user_username,user_password,user_email_address',"user_email_address='".$_POST['email']."' ",'','',''); 
+
+	$row=$callConfig->getRow($query);
+	//print_r($row);exit;
+	if($row->user_email_address!="" && $row->user_password!="")
+
+	{
+		
+		$for_key=substr(md5(rand()), 0, 25).time();
+		$fieldnames=array('id'=>$row->user_id,'user_email'=>$row->user_email_address,'verificartion_key'=>$for_key,'type'=>'for','verify_status'=>'no');
+		$res=$callConfig->insertRecord(TBL_RESTPASSWORD,$fieldnames);
+
+		$message="<table width='100%' border='0' style='border:1px solid #CCCCCC; border-collapse:collapse;font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#89806e; font-weight:bold;'>
+       
+         <tr>
+				  <td colspan='2' align='left' valign='top'><img src='http://192.254.233.173/~rajeshch/safe2meet/uploads/site/site_image_145450242656b1f21a43cc9.png' width='303' height='65'/></td>
+				
+				  </tr>
+      
+       
+       <tr>
+       <td >
+        <table cellspacing='0' cellpadding='5'  align='center' width='100%' border='0' style=' font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px;'>
+				  <tr>
+					<td  colspan='2' align='left' valign='top'>Dear<strong> ".$row->user_username.",</strong></td>
+
+				  </tr>
+				  
+				  <tr>
+					<td valign='top' colspan='2' align='left'>
+				Please find below the summary of your Safe2meet Information:</td>
+				  </tr>
+				
+				  <tr>
+					<td valign='top' colspan='2' align='left'><table width='100%' border='1' cellspacing='0' cellpadding='0' style='border:1px solid #eeeeee; border-collapse:collapse;font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px;'>
+						
+					<tr>
+					  <td width='15%' height='23' align='left' valign='middle' colspan=2 ><strong>Login Details:</strong></td>
+					</tr>
+					<tr>
+					  <td width='15%' height='23' align='left' valign='middle'><strong>Name:</strong></td>
+					  <td width='32%' height='23' align='left' valign='middle'>".$row->user_username."</td>
+					</tr>
+					<tr>
+					  <td width='15%' height='23' align='left' valign='middle'><strong>Password:</strong></td>
+					  <td width='32%' height='23' align='left' valign='middle'>".base64_decode(base64_decode($row->user_password))."</td>
+					</tr>
+					<tr>
+					  <td width='15%' height='23' align='left' valign='middle'><strong>Email:</strong></td>
+					  <td width='32%' height='23' align='left' valign='middle'>".$row->user_email_address."</td>
+					</tr>
+				  <tr>
+					<td valign='top' colspan='2' align='left'>Please contact our customer support team at support@safe2meet.com if you have questions. </td>
+				  </tr>
+			
+				</table>
+       </td>
+       </tr>
+       <tr>
+         <td height='35' >
+         
+         <br >
+         <br >
+         Sincerely <br >
+         Safe2meet <br > <br >
+		
+         Where the pursuit of looking good ends in doing good! <br >
+         support@safe2meet.com <br >
+         
+         </td>
+       </tr>
+     
+    </table>
+
+";
+
+		//echo $message;exit;
+		
+		$headers  = 'MIME-Version: 1.0' . "\r\n";
+
+		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+		//$headers .= 'From: StrongerRX <info@themedia3.com>' . "\r\n";
+
+		$headers .= 'From:Safe2meet <info@safe2meet.com>' . "\r\n";
+
+		if(mail($row->user_email_address,"Forgot Password",$message,$headers))
+
+		{
+
+		 header("Location:index.php?msg=Password Sent To your Email");
+
+		  
+
+		}
+	
+		else
+
+		{
+
+		  header("Location:index.php?msg=Your Entered Details Doesnot Match With Our Database");
+
+		   
+
+		}
+	}
+
+
+		
+	}
+	
+/*Confirm Your Account is Active*/
+
+ function confirmyouraccountactivation($post)
+  {
+  //print_r($_POST); exit;
+	 global $callConfig;
+	
+	$i=date("Y-M-d");
+	
+	///$ss = mysql_query("update tb_users set status='Active' where id=".$_POST['uid']."");
+
+	 
+	   if($res!="")
+	 
+	 $uid = mysql_insert_id();
+
+	if($_POST['email']!='')
+	{
+			
+
+				  $qu = "select * from sitesettings where user_id = '1'";
+
+				  $siteim =  mysql_query($qu);
+
+				  $imgres = mysql_fetch_assoc($siteim);
+
+				  $siteimagelogo = $imgres['site_image']; 
+                 /*  $AdminEmail = $imgres['contactusmail']; */
+				  $AdminEmail = $imgres['mail_frommail']; 
+
+				  $pwd=$callConfig->passwordDecrypt($res->user_password);
+
+				  //$userid=$res->id;
+
+				  $user_name=$_POST['uname'];
+
+				   $user_email=$_POST['email'];
+
+				  
+
+		      $to=$_POST['email'];
+
+				$subject ="Safe2meet Registration Success Mail";
+
+	     $message="<div style=\"width:504px; border:3px solid #096580; margin-top:-3px; color: #CCCCCC;\">
+		   <p><a href='".SITEURL."'><img src='http://192.254.233.173/~rajeshch/safe2meet/uploads/site/".$siteimagelogo."' style='border:1px solid #CCCCCC; border-collapse:collapse;font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#89806e; font-weight:bold; width: 186px;
+    height: 40px;'> </a></p>
+
+     <div style=\"padding:10px; color: #000000;\">
+
+	 <p style=\"background-color:rgb(244,243,243); margin:-10px; padding:10px; border-bottom:2px solid #cdcdcd;\"><strong> Registration Success Mail:</strong></p>
+
+	<strong><p>Dear ".$user_name." </strong></p>
+
+		   Thank you For Registered in Safe2meet.
+
+		   </p>
+		  
+ <p><a href='http://192.254.233.173/~rajeshch/safe2meet/update_login.php?user_id=".$_POST['uid']."'>Click Here To Login</a></p>
+
+     <p style=\"text-align:center;\"></p>
+
+     <p>Regards,<br>
+
+Safe2meet  Team</p>
+
+     </div>
+
+     </div>";
+ 
+	//echo $message; exit; 
+
+			 $headers  = 'MIME-Version: 1.0' . "\r\n";
+
+			 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+			$headers .= "From:Safe2meet <".$AdminEmail.">"." "."\r\n";
+			// $headers .= 'From:'.$AdminEmail. "\r\n";
+
+			 $headers .= "Reply-To: Safe2meet <".$contact_person.">"." "."\r\n";
+
+		     $headers .= "Return-Path:  Safe2meet <".$contact_person.">"." "."\r\n";
+
+			 mail($to, $subject, $message, $headers,'-fexample@gmail.com');
+
+			
+			 
+			// echo $message;  exit;
+
+		    $_SESSION['mailsucessmsgbre']="success";
+
+			if($_SESSION['mailsucessmsgbre']!="")
+
+			{
+
+			$callConfig->headerRedirect("index.php?srgreg=successfully");
+
+			}
+
+			}
+
+			else
+
+			{	
+
+			 $callConfig->headerRedirect("register.php?srgreg=failed");
+			}
+
+	        
+
+
+  }	
+
+ function stripepaymet($post)
+
+  {
+	 // echo"hiiiiiiiiiiiiiiiiiiiiiiiii";
+  //print_r($_POST); exit;
+	 global $callConfig;
+	
+	//$i=date("Y-m-d H:i:s");
+	
+	
+	//exit();
+	 $fields=array(
+	 's2m_subscription_card_token'=>$_POST['stripeToken'],
+	 's2m_subscription_street'=>$_POST['street'],
+     's2m_subscription_zip'=>$_POST['zip'],
+	 's2m_subscription_country'=>$_POST['country'],
+	 's2m_subscription_state'=>$_POST['state']);
+	 
+print_r($fields);exit;
+       $payment=$callConfig->insertRecord(TBL_SUBSCRIPTION_PAYMENNT,$fields);
+	   //echo $res;
+	 //$payment=$callConfig->insertRecord(TBL_PAYMENT,$fields);
+	// exit;
+	 //$uiid = mysql_insert_id();
+
+	 if($payment!="")
+
+			
+				
+
+			{
+
+			$callConfig->headerRedirect(SELFVERFICATIONSUCCESS."?payment=successfully");
+
+			}
+
+			
+
+			else
+
+			{	
+
+			 $callConfig->headerRedirect(SELFVERFICATIONSUCCESS."?payment=failed");
+			}
+
+	        
+
+	        
+	
+
+  }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 
+ }
+?>
+
+	  
+ 
+ 
+  
+  
+  
+

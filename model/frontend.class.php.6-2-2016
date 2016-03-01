@@ -1,0 +1,100 @@
+<?php
+class frontendClass
+{ 
+ 
+ 
+   function getsitesettings()
+  {
+	 
+	 global $callConfig;
+	 $query=$callConfig->selectQuery(TPREFIX.TBL_SITESETTINGS,'*','','','','');
+	return $callConfig->getRow($query);
+	  
+  }
+ 
+ 
+  function getblogdetails()
+  {
+	 
+	  global $callConfig;
+	  $query=$callConfig->selectQuery(TPREFIX.TBL_TESTIMONIAL,'*','','','','');
+	 
+	  return $callConfig->getAllRows($query);
+  }
+  
+  function getblogabout($id)
+  {
+	 
+	  global $callConfig;
+	  $whr = "id".$id."";
+	  $query=$callConfig->selectQuery(TPREFIX.TBL_CONTENTPAGE,'*',$whr,'','','');
+	 
+	  return $callConfig->getRow($query);
+  }
+  
+  
+  
+  
+  function userregister()
+
+  {
+  //print_r($_POST); exit;
+	 global $callConfig;
+	$eventimage = $callConfig->freeimageUploadcomncode("username",'image',"uploads/reguser/","uploads/reguser/thumbs/",'','','');
+	//$i=date("Y-m-d H:i:s");
+	$i=date("Y-M-d");
+	
+	//exit();
+	 $fields=array('username'=>$_POST['uname'],
+	 'reguser_image'=>$eventimage,
+	 
+	
+	 'email'=>$_POST['email'],
+	 'password'=>$callConfig->passwordEncrypt($_POST['password']),
+	  'phoneno'=>$_POST['phnum'],
+	 'address'=>$_POST['answer'],
+	 'lastname'=>$_POST['lname'],
+     'firstname'=>$_POST['fname'],
+	 'dateofbirth'=>$_POST['dateofbirth'],
+	  //'stateofbirth'=>$_POST['stateofbirth'],
+	// 'cityofbirth'=>$_POST['cityofbirth'],
+	 
+	 'timeuserenter'=>$i,
+	 
+	 'status'=>'Active',
+	
+	 /*'type'=>'user',	
+	 'date'=>date('Y-m-d')*/);
+//print_r($fields); exit;
+	 $res=$callConfig->insertRecord(TPREFIX.TBL_USERS,$fields); 
+
+	  if($res!="")
+
+	  {
+
+		  $callConfig->headerRedirect("login.php?&err=User created successfully");
+
+	  }
+
+	  else
+
+	  {
+
+		  $callConfig->headerRedirect("register.php?&ferr=User creation failed");
+
+	  }
+
+  }
+  
+  
+	 
+ }
+?>
+
+	  
+ 
+ 
+  
+  
+  
+

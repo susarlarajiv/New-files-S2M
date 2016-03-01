@@ -1,0 +1,192 @@
+/* Fonts ========================================================================*/
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700);/* Reseting ====================================================================*/
+/*font-family: 'Poppins', sans-serif;*/
+
+/* Reseting ====================================================================*/
+
+@font-face {
+  font-family: 'TrebuchetMS-Bold';
+  src: url('../fonts/TrebuchetMS-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/TrebuchetMS-Bold.woff') format('woff'), url('../fonts/TrebuchetMS-Bold.ttf')  format('truetype'), url('../fonts/TrebuchetMS-Bold.svg#TrebuchetMS-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TrebuchetMS';
+  src: url('../fonts/TrebuchetMS.eot?#iefix') format('embedded-opentype'),  url('../fonts/TrebuchetMS.woff') format('woff'), url('TrebuchetMS.ttf')  format('truetype'), url('../fonts/TrebuchetMS.svg#TrebuchetMS') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+	
+*{ margin:0px; padding:0px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+   box-sizing: border-box; }
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary 	{ display: block; }
+audio,
+canvas,
+progress,
+video 		{ display: inline-block; vertical-align: baseline; }
+a			{ text-decoration:none; border:none; outline:none; color:#000; }
+a:active,
+a:hover 	{ outline: 0; }
+img			{ border:none; outline:none; max-width:100%; height:auto; }
+ul			{ list-style:none; }
+body		{ font-size:13px; background:#f4f4f4; font-family: 'TrebuchetMS'; font-weight:300; }
+h1			{ font-size:36px; margin-top:0px; margin-bottom:0px; }
+h2			{ font-size:30px; margin-top:0px; margin-bottom:0px;  }
+h3			{ font-size:20px; margin-top:0px; margin-bottom:0px;  }
+h4			{ font-size:18px;  margin-top:0px; margin-bottom:0px; }
+h5          { font-size:15px;  margin-top:0px; margin-bottom:0px; }
+h6          { font-size:15px;  margin-top:0px; margin-bottom:0px; }
+p           { padding:7px 2px; line-height:25px; text-align:justify;
+               font-size:12px; color:#433e3e; }
+.clear_fix	{ width:100%; clear:both; } 
+.res_images	{ width:100%; height:auto; }
+.res_images1 { max-width:100%; height:auto; }
+.res_imagesbtn { width:80%; height:auto; }
+.res_row	{ width:100%; clear:both; }
+::-webkit-input-placeholder { color:#585858; }
+:-moz-placeholder 			{ color:#585858; }
+::-moz-placeholder 			{ color:#585858; }
+:-ms-input-placeholder 		{ color:#585858; }
+
+/* layouts ===============================================================================*/
+.full_wrapper	{ width:100%; padding:0px; }
+.site_container {  max-width:1150px; margin-left:auto; margin-right:auto; margin:0px auto; width:95%; }
+ 
+/* dividers ========================================================================*/
+
+/*Styles ========================================================================*/
+/*header*/
+header { background:#3b3b3d; height:162px; }
+.header-logo { padding-top:35px; text-align:center; }
+.logincontainer { max-width:855px; margin:100px auto 0px; border:1px solid #cccccc; -webkit-border-radius: 7px;
+                   -moz-border-radius:7px; border-radius:7px; padding:80px 0px; background-color:#fff; font-size:14px; }
+.loginwrap   { max-width:320px; margin:auto; text-align:center; }				   
+.loginwrap h1 { font-size:26px; color:#3b3b3d; margin:25px 0px 10px; }
+.loginwrap h4 { font-size:17px; color:#17649a; }
+.loginwrap p  { font-size:14px; color:#3b3b3d; line-height:21px; text-align:center; margin-top:12px; }
+.loginwrap input[type="text"] { border:2px solid #f4f4f4; width:100%; height:42px; margin-top:10px;-webkit-border-radius:7px;
+                                -moz-border-radius:7px; border-radius:7px; padding:0px 10px; width:100%; color:#3b3b3d; }
+
+.loginwrap textarea { border:2px solid #f4f4f4; width:100%; height:98px; margin-top:10px;-webkit-border-radius:7px;font-family: 'TrebuchetMS'; 
+                                -moz-border-radius:7px; border-radius:7px; padding:10px 10px; width:100%; color:#d0d0d0; }
+.loginwrap input[type="password"] { border:2px solid #f4f4f4;width:100%; height:42px; margin-top:10px; -webkit-border-radius:7px;                                   -moz-border-radius:7px; border-radius:7px; padding:0px 10px; width:100%; color:#d0d0d0; }								
+.loginwrap input[type="submit"] { background:#9fcb4b; font-size:17px; border:none;width:100%; height:42px;  -webkit-border-radius:7px;                                   -moz-border-radius:7px; border-radius:7px; padding:10px 0px;color:#fff; text-align:center; font-family: 'TrebuchetMS-Bold';}								
+.rememberme   { margin:15px 0px 10px; color:#a0c96b; text-align:left; font-weight:500; }
+.rememberme a  { color:#a0c96b; }
+.donthaveacc   { margin:15px 0px 10px; color:#a0c96b;   }
+.donthaveacc a  { color:#a0c96b; }
+.margintop      { margin-top:10px; }
+.margintop1     { margin-top:20px; }
+.copyright      { text-align:center; color:#000; padding:20px 0px; }
+.upload-file-container { background:url(../images/uploadimg_03.png) no-repeat; height:42px; width:140px; margin-top:0px;  
+                         float:left; }
+.upload-file-container input { filter:alpha(opacity=0); opacity:0; height:42px; width:140px; }
+
+/*dashboard*/
+.dashboardleft  { float:left; width:20%; background-color:#3b3b3d; text-align:center; padding-top:115px; min-height:1150px; }
+.dashboardright { float:right;   width:80%; padding:22px; }
+.dashboardleft h1 { color:#fff; font-size:17px; text-align:center; font-weight:400; margin-top:5px; }
+.dashboardleft h2 { color:#9fcb4b; font-size:17px; text-align:center; font-weight:400;  }
+.dashboardlist { padding-top:115px; }
+.dashboardlist li{ border-bottom:1px solid #6b6b6b; text-align:left;font-family: 'TrebuchetMS'; font-weight:500; }
+.dashboardlist li:first-child{ border-top:1px solid #6b6b6b; }
+.dashboardlist li a { color:#fff; font-size:14px;  padding:10px 10px; display:block; }
+.arrowicon  { float:right; position:relative; top:5px; }
+.dashboardheader { background-color:#fff; border:1px solid #cfcfcf; padding:12px 22px 22px; }
+.dashboardlogo  { float:left; }
+.menuicon      { float:right; padding-top:12px; }
+.successmsg   { background-color:#17649a; padding:75px 0px; margin-top:15px; }
+.successmsg h1 { font-size:52px; font-family: 'TrebuchetMS-Bold'; color:#fff; text-align:center; font-weight:600; }
+.successmsg h2 { font-size:40px; font-family: 'TrebuchetMS-Bold'; color:#fff; text-align:center; font-weight:600; }
+.successmsg p  { font-size:24px; font-family: 'TrebuchetMS'; color:#fff; text-align:center; max-width:830px; margin:auto;
+                 padding:0px; line-height:30px; margin-top:10px; }
+.certifywrap   { background-color:#fff; border:1px solid #cfcfcf; border-top:none; padding-bottom:15px; }
+.certifylist   { width:90%; margin:auto; padding-top:50px; }
+.certifylist li { border:1px solid #dfdfdf; background-color:#ececec; height:588px; text-align:center;   }
+.certifylist li:nth-child(1) { float:left; width:48%; }
+.certifylist li:nth-child(2) { float:right; width:48%; }
+.topmargin  { margin-top:15px; }
+.topmargin1  { margin-top:25px; }
+.mobileicon  { display:none; }
+.logoheight  { height:76px; }
+.scoreboard { height:381px; padding:23px 0px 0px; }
+.linkedaccounts { border:1px solid #cfcfcf; background-color:#fff; padding:20px 25px 30px; margin-top:30px; }
+.linkedaccounts h3{ color:#87a668; font-size:26px;font-family: 'TrebuchetMS-Bold'; text-align:center; margin-bottom:25px; }
+.myactivitytable { width:100%; text-align:left; }
+.myactivitytable th {font-family: 'TrebuchetMS-Bold';  font-size:24px; color:#1c1c1c; padding:15px 0px; }
+.myactivitytable td {font-family: 'TrebuchetMS-Bold';  font-size:18px; color:#3b3b3d; padding:15px 0px; }
+.myactivitytable tr:nth-child(odd) { background-color:#f1f1f1; }
+.myactivitytable tr:nth-child(even) { background-color:#fff; }
+.myactivitytable tr:nth-child(1) { background-color:#f4f4f4; }
+.editpage  { }
+.editpage li { float:left; }
+.editpage li a {color:#a0c96b; background:url(../images/border_11.png) no-repeat right center; padding:0px 10px; display:block; }
+.dashboardright h3 { color:#87a668; font-size:26px; text-align:center; margin:14px 0px; }
+.editpage li:nth-child(3) a  { background:none; }
+.leftpadding { padding-left:15px; }
+.btnright { float:right; margin-top:10px; }
+.dashboardexisiting {width:95%; margin:auto; margin-top:70px; }
+.rightbtn  {float:right; padding-top:65px; width:20%; }
+.leftlogo  {float:left; width:15%; }
+.midoontent { float:left; text-align:center; width:65%; }
+.mystatus { float:left;color:#484848; font-size:22px; padding-top:70px; width:20%; }
+.certifieddate { float:left; color:#a0c96b; font-size:22px;  padding-top:70px;  width:40%;}
+.certified { float:left; color:#484848; font-size:22px; padding-top:36px;  width:40%; }
+.myactivitylist   { display:none; }
+.minheight  { min-height:1350px; }
+.paddingnone { padding-top:25px; }
+.smalllogo  { text-align:center; padding-top:10px; }
+
+/*selfverification*/
+.logowrap { float:left; }
+.username { float:right;font-family: 'TrebuchetMS-Bold';  font-size:24px; }
+.dashboardright h1{ font-size:36px; text-align:center; margin:20px 0px 0px; }
+.dashboardright h6 { font-size:16px; font-family: 'TrebuchetMS'; font-weight:400; text-align:center; }
+.selfverification  { width:90%; margin:auto; }
+.selfverification h4 { font-size:22px; font-family: 'TrebuchetMS-Bold'; margin-top:25px; color:#9fcb4b; margin-bottom:20px; }
+.selfverification h6 { font-size:13px; float:left; }
+.verificationform { background-color:#fff; border:1px solid #cccccc;  }
+.mandatoryfield  { color:#ff0000; font-size:13px; float:right; }
+.fieldname     { float:left; width:40%; text-align:right; margin-top:10px; padding-top:10px;font-family: 'TrebuchetMS-Bold';                 font-size:15px; }
+.fieldtype     { float:left; width:50%; margin-top:10px; padding-left:10px;  }
+.fieldtype a   { color:#808080; font-size:12px; }
+.fieldtype input[type="text"]    { background-color:#fff; border:none; height:35px; padding:0px 10px; width:100%; 
+                                   font-family: 'TrebuchetMS'; font-weight:400;  border: 2px solid #f4f4f4;
+                                   border-radius: 7px;}
+.select-style       { border:2px solid #f4f4f4;overflow:hidden;background:#fff url(../images/arrowicon_05.png) no-repeat 95% 50%;                      margin:0px 0px; -webkit-border-radius:7px; -moz-border-radius:7px; border-radius:7px; height:35px; }
+.select-style select { padding:0px 3px; width:100%; border:none; box-shadow:none; background:transparent; background-image:none;                       -webkit-appearance:none; -moz-appearance:none; appearance:none; height:30px; color:#000000; }
+.select-style select:focus { outline: none; }
+.paddingtop       { padding-top:15px; }
+.verificationtypes        { margin-top:14px;}
+.verificationtypes li     { float:left; width:50%; font-family: 'TrebuchetMS-Bold'; font-size:15px;  }
+
+
+.cardtypes        {  }
+.cardtypes li     { margin-top:10px;  }
+.cardname         { float:left; font-family: 'TrebuchetMS-Bold'; font-size:14px; width:30%; padding-top:10px;  }
+.cardimg          { float:left; width:20%; text-align:center;}
+.cardexpiry       { float:left; font-family: 'TrebuchetMS-Bold'; font-size:14px;  width:50%;  padding-top:10px; }
+.expiredcard      { color:#ff0000; }
+
+.makepaymentbtn    { max-width:300px; margin:20px auto;  }
+.makepaymentbtn input[type="submit"]   { border:none; background-color:#9fcb4b; padding:10px 15px; color:#fff; 
+                                        font-family: 'TrebuchetMS-Bold'; font-size:14px;
+										-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+
+.makepaymentbtn1 { border:none; background-color:#9fcb4b; padding:10px 15px; color:#fff; 
+                                        font-family: 'TrebuchetMS-Bold'; font-size:14px;
+										-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+/*selfverification*/

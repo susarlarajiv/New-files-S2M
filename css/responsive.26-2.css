@@ -1,0 +1,129 @@
+ @media (max-width:767px) 
+{
+.logincontainer { padding:35px 0px; margin:70px auto 0px; }
+}
+@media (max-width:480px) 
+{
+.loginwrap {width:90%; margin:auto; }
+ .loginwrap h1  { font-size:23px; margin:15px auto 5px; }
+ }
+@media (max-width:1024px) 
+{
+/*dashboard*/
+.certifylist li { padding:0px 20px;  }
+.successmsg    { padding:55px 20px; }
+.myactivitytable td { font-size:15px; }
+.minheight  { min-height:900px; }
+}
+@media (max-width:800px) 
+{
+/*dashboard*/
+.logo1       { float:left; }
+.accname     { float:right; padding-top:28px; }
+.dashboardleft { float:none; min-height:auto; padding:10px 20px; text-align:left; width:100%; }
+.dashboardright { float:none; min-height:auto; padding:10px 0px; text-align:left; width:100%; }
+.minheight  { min-height:auto; }
+.dashboardlist  { padding-top:10px; display:none; }
+.dashboardlist li a { padding:10px 0px; }
+.dashboardlist li { border-bottom:none; }
+.dashboardlist li:first-child{ border-top:none; }
+.mobileicon  { display:block; text-align:center; margin-top:10px; cursor:pointer; }
+.editpage li a { padding:0px 7px; }
+.mystatus { float:left;color:#484848; font-size:22px; padding-top:53px; width:20%; }
+.certifieddate { float:left; color:#a0c96b; font-size:22px;  padding-top:53px;  width:40%;}
+.successmsg { height:auto; }
+.dashboardexisiting { margin-top:20px; }
+.smalllogo  { text-align:center; padding-top:10px; display:none; }
+}
+@media (max-width:767px) 
+{
+/*dashboard*/
+.logincontainer { padding:35px 0px; margin:70px auto 0px; }
+.myactivitytable td { font-size:13px; }
+.myactivitytable th { font-size:18px; }
+.leftlogo { width:auto; }
+.rightbtn { width:auto; }
+.midoontent {
+    clear: both;
+    float: none;
+    text-align: center;
+    width: 100%;
+}
+.mystatus { padding-top:23px; }
+.certified { padding-top:0px; }
+.certifieddate { padding-top:33px; }
+}
+@media (max-width:639px) 
+{
+/*dashboard*/
+.successmsg h1 { font-size:38px; }
+.successmsg p  { font-size:18px; line-height:24px; }
+.certifylist li { height:auto; padding-bottom:20px; }
+.successmsg { padding:22px 0px; }
+
+.mystatus {
+    padding-top: 38px;
+	font-size:17px;
+}
+.certified { font-size:16px; }
+.certifieddate { font-size:17px; }
+.leftlogo { display:none; }
+.rightbtn { padding-top:10px; float:none; text-align:center; }
+.mystatus { float:none; text-align:center; width:100%; padding-top:15px; }
+.certified { float:none; text-align:center; width:100%; }
+.certifieddate { float:none; text-align:center;width:100%; }
+.myactivitytable { display:none; }
+.myactivitylist { display:block; }
+.myactivitylist>li{ padding:10px 10px; }
+.myactivitylist>li:nth-child(odd) { background-color:#f1f1f1;}
+.myactivitylist>li:nth-child(even) { background-color:#fff; }
+.myactivityleft p { font-size:14px; color:#433e3e; margin-top:7px; padding:0px; }
+.myactivityright p { font-size:14px; color:#433e3e; margin-top:7px; padding:0px; }
+.myactivityleft  { float:left; }
+.myactivityright  { float:right; }
+.editpage  { margin-top:8px; }
+.editpage li:nth-child(1) a { padding-left:0px; }
+}
+@media (max-width:480px) 
+{
+.loginwrap {width:90%; margin:auto; }
+.loginwrap h1  { font-size:23px; margin:15px auto 5px; }
+/*dashboard*/
+.certifylist { padding-top:24px; }
+.certifylist li:nth-child(1) {
+    float: none;
+    width: 100%;
+}
+.certifylist li:nth-child(2) {
+    float: none;
+    width: 100%;
+	margin-top:15px;
+}
+
+.successmsg p {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.successmsg h1 {
+    font-size: 25px;
+}
+.btnright { float:none; text-align:center;  } 
+.btnright a{ padding-top:10px; display:block;  }  
+.myactivityleft  { float:none; width:100%; text-align:center; }
+.myactivityright  { float:none; width:100%; text-align:center; }
+.myactivityleft p  { text-align:center; }
+.myactivityright p {   text-align:center; }
+
+.editpage {
+    margin: auto;
+    max-width: 123px;
+	margin-top:10px;
+}
+
+.dashboardheader {
+    padding: 12px 9px 22px;
+}
+ }
+
+
